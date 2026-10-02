@@ -1,6 +1,6 @@
 # Claude Code → Obsidian on No-AVX Windows
 
-A documented path for running Claude Code on legacy Windows systems without AVX/AVX2 using a Node.js-compatible Claude Code build, with an Obsidian MCP/REST integration.
+A documented path for running Claude Code on legacy Windows systems without AVX/AVX2 using a Node.js-compatible Claude Code build, plus a separately verified Obsidian MCP/REST integration.
 
 ## Target environment
 
@@ -9,7 +9,9 @@ A documented path for running Claude Code on legacy Windows systems without AVX/
 - Node.js 24.x
 - No WSL2, Hyper-V, or VM dependency
 
-## Architecture
+## What is verified
+
+### Claude Code path
 
 ```text
 Claude Code
@@ -18,12 +20,28 @@ Pure Node.js CLI
     ↓
 MCP / stdio
     ↓
-Obsidian MCP layer
+Node MCP server
+```
+
+The Pure Node Claude Code CLI and its MCP stdio transport were verified independently.
+
+### Obsidian path
+
+```text
+Claude Desktop / MCP client
+    ↓
+MCPB
+    ↓
+Node.js
+    ↓
+Obsidian MCP REST layer
     ↓
 Obsidian Local REST API
     ↓
 Obsidian vault
 ```
+
+The Obsidian integration was verified separately through Claude Desktop. This repository does **not** claim that the complete Claude Code → Obsidian end-to-end path has been verified.
 
 ## Verified status
 
@@ -42,6 +60,7 @@ Obsidian vault
 | Write operations | NOT TESTED |
 | Claude Code authentication/session | NOT VERIFIED |
 | Full built-in plugin compatibility | NOT VERIFIED |
+| Claude Code → Obsidian end-to-end workflow | NOT VERIFIED |
 
 ## Documentation
 
