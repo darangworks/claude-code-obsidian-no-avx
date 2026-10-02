@@ -1,0 +1,8 @@
+{
+  "mcp_server": {
+    "name": "obsidian-mcp-rest",
+    "version_tested": "0.1.1",
+    "api_url": "https://127.0.0.1:27124",
+    "api_key": "${OBSIDIAN_API_KEY}"
+  }
+}
