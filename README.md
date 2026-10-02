@@ -54,7 +54,7 @@ Obsidian vault
 
 The Obsidian path was tested **separately through Claude Desktop**. This repository does **not** claim that Claude Code successfully drove the Obsidian server end-to-end.
 
-### Endpoint clarification
+### Endpoint and bridge provenance
 
 The tested Obsidian endpoint was:
 
@@ -62,9 +62,11 @@ The tested Obsidian endpoint was:
 https://127.0.0.1:27124
 ```
 
-This is the encrypted HTTPS endpoint exposed by the Obsidian Local REST API configuration used during the test. Port `27123` is the alternative non-encrypted HTTP endpoint and was **not** the endpoint recorded for the successful test.
+The tested `obsidian-mcp-rest` release was **0.1.1**, corresponding to upstream commit `b59fc7f`. Its REST client accepts a configurable full base URL, including HTTPS, so the HTTPS scheme is supported by the bridge itself rather than inferred solely from the Local REST API plugin.
 
-The repository does not claim that every upstream `obsidian-mcp-rest` release/configuration uses the same endpoint automatically. The tested local configuration must therefore be treated as part of the experiment.
+Port `27123` is the alternative non-encrypted HTTP endpoint and was **not** the endpoint recorded for the successful test.
+
+The exact MCPB package used in the local test is not included, so byte-for-byte reproduction of that local package remains outside the repository's evidence.
 
 ## Quick Start
 
