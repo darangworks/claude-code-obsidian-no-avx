@@ -1,0 +1,6 @@
+{
+  "name": "obsidian-mcp",
+  "description": "Example configuration placeholder for an Obsidian MCP integration",
+  "api_url": "https://127.0.0.1:27124",
+  "api_key": "${OBSIDIAN_API_KEY}"
+}
