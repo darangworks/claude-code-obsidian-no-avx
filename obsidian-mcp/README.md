@@ -20,7 +20,7 @@ Obsidian Local REST API
 Obsidian vault
 ```
 
-## Tested endpoint
+## Tested endpoint and bridge provenance
 
 The successful local test used:
 
@@ -28,7 +28,7 @@ The successful local test used:
 https://127.0.0.1:27124
 ```
 
-This was the encrypted HTTPS endpoint configured in the Obsidian Local REST API setup used during the test.
+The tested `obsidian-mcp-rest` release was **0.1.1**, corresponding to upstream commit `b59fc7f`. Its REST client accepts a configurable full base URL, including HTTPS. Therefore the HTTPS scheme is supported by the bridge itself.
 
 Port `27123` is the alternative non-encrypted HTTP endpoint and was not the endpoint recorded for the successful test. Do not infer the endpoint solely from an upstream default; reproduce the local configuration used by the test.
 
@@ -41,6 +41,7 @@ Therefore this repository establishes a separate Obsidian read path, not a compl
 ## Tested software versions
 
 - `obsidian-mcp-rest`: 0.1.1
+- Upstream source commit: `b59fc7f`
 - Node.js: 24.19.0
 - MCPB CLI: 2.1.2
 - Local REST API: configured locally; exact plugin release is not recorded in the public repository
