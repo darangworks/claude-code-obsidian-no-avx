@@ -10,6 +10,13 @@ credentials/
 .claude/
 .claude.json
 
+# Generated Claude Code / vendor output
+cli.js
+bun-shim.cjs
+dist/
+build/
+*.mcpb
+
 # OS / editor
 .DS_Store
 Thumbs.db
