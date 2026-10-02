@@ -68,6 +68,7 @@ The Obsidian integration was tested separately through Claude Desktop / MCP clie
 Tested versions:
 
 - obsidian-mcp-rest 0.1.1
+- Upstream source commit: `b59fc7f`
 - MCPB CLI 2.1.2
 - Node.js 24.19.0
 
@@ -81,7 +82,7 @@ The successful local test used:
 https://127.0.0.1:27124
 ```
 
-This was the encrypted HTTPS endpoint configured in the local Obsidian REST API setup used for the test. Port `27123` was not the recorded endpoint for that successful test.
+The pinned `obsidian-mcp-rest` 0.1.1 source accepts a configurable full REST base URL, including HTTPS. No TLS proxy or source patch is claimed for this setup. Port `27123` was not the recorded endpoint for that successful test.
 
 ### Credentials
 
