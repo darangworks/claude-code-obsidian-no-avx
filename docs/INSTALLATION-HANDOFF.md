@@ -89,6 +89,8 @@ Other capabilities that remain unverified include:
 
 The tested Obsidian path was:
 
+`obsidian-mcp-rest` 0.1.1 was pinned to upstream commit `b59fc7f`; its REST client accepts a configurable full base URL, including HTTPS. No TLS proxy or source patch is claimed for the tested setup.
+
 ```text
 Claude Desktop
         ↓
@@ -100,7 +102,7 @@ obsidian-mcp-rest 0.1.1
         ↓
 HTTPS 127.0.0.1:27124
         ↓
-Obsidian REST API
+Obsidian Local REST API
         ↓
 Obsidian Vault
 ```
@@ -116,6 +118,10 @@ Verified:
 A full plain-Markdown read of a large Research Card returned HTTP 500 / `errorCode: 50000`. The cause was not established, and this failure should not be generalized to the entire MCP or Node.js path.
 
 Write operations were not tested.
+
+## Reproduction guide
+
+For the command-level reproduction steps, see [docs/REPRODUCTION.md](REPRODUCTION.md).
 
 ## Reproducibility principle
 
