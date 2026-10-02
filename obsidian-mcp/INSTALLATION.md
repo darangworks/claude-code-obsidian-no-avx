@@ -4,11 +4,12 @@ This document describes the tested Obsidian-side setup boundary.
 
 ## Included
 
-This repository includes documentation and redacted configuration examples. It does not include the tested MCPB package, Obsidian API key, private vault, or proprietary third-party binaries.
+This repository includes documentation and one redacted configuration example. It does not include the tested MCPB package, Obsidian API key, private vault, or proprietary third-party binaries.
 
 ## Tested software
 
 - obsidian-mcp-rest 0.1.1
+- Upstream source commit: `b59fc7f`
 - MCPB CLI 2.1.2
 - Node.js 24.19.0
 - Obsidian Local REST API configured locally
@@ -19,7 +20,7 @@ This repository includes documentation and redacted configuration examples. It d
 https://127.0.0.1:27124
 ```
 
-This was the encrypted HTTPS endpoint configured in the local Obsidian REST API setup used during the successful read tests. Port `27123` is an alternative non-encrypted HTTP endpoint and was not the endpoint recorded for the successful test.
+The pinned `obsidian-mcp-rest` 0.1.1 source accepts a configurable full REST base URL, including HTTPS. No TLS proxy or source patch is claimed for this setup. Port `27123` is an alternative non-encrypted HTTP endpoint and was not the endpoint recorded for the successful test.
 
 ## Setup boundary
 
