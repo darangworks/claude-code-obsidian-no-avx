@@ -1,0 +1,30 @@
+# Credentials / local configuration
+.env
+.env.*
+*.key
+*.pem
+secrets/
+credentials/
+
+# Local Claude / tool state
+.claude/
+.claude.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Local vault/content
+vault/
+*.vault
